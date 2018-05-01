@@ -1,0 +1,32 @@
+Source: bettercap
+Section: net
+Priority: optional
+Maintainer: Sophie Brun <sophie@freexian.com>
+Build-Depends: debhelper (>= 9~),
+               gem2deb,
+Standards-Version: 3.9.8
+Vcs-Git: git://git.kali.org/packages/bettercap.git
+Vcs-Browser: http://git.kali.org/gitweb/?p=packages/bettercap.git;a=summary
+Homepage: https://www.bettercap.org
+XS-Ruby-Versions: all
+
+Package: bettercap
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ruby-colorize (>= 0.7.5),
+         ruby-em-proxy (>= 0.1.8),
+         ruby-eventmachine,
+         ruby-net-dns (>= 0.8.0),
+         ruby-network-interface (>= 0.0.1),
+         ruby-packetfu (>= 1.1.10),
+         ruby-pcaprub (>= 0.12.0),
+         ruby-rubydns (>= 1.0.3),
+         net-tools,
+         iptables,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Complete, modular, portable and easily extensible MITM framework
+ This package contains a modular, portable and easily extensible MITM framework
+ featuring ARP, DNS and ICMP spoofing, sslstripping, credentials harvesting
+ and more.
